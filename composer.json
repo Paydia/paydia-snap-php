@@ -25,6 +25,6 @@
             "PaydiaSNAP\\": "lib/"
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": false
 }
