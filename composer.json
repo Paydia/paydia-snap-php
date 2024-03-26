@@ -1,0 +1,28 @@
+{
+    "name": "paydia/paydia-snap-php",
+    "description": "PHP Wrapper for Paydia SNAP QR API.",
+    "homepage": "https://paydia.id",
+    "version": "1.0.0",
+    "type": "library",
+    "license":"MIT",
+    "authors": [
+        {
+            "name": "IT Paydia",
+            "email": "it@paydia.id"
+        },
+        {
+            "name": "Firman Zain",
+            "email": "firman@paydia.id"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PaydiaSNAP\\": "lib/"
+        }
+    }
+}
