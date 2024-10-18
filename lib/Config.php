@@ -34,7 +34,7 @@ class Config
      * 
      * @var string
      */
-    protected const BASE_URL_SANDBOX = "https://dev-api.paydia.co.id/snap";
+    protected const BASE_URL_SANDBOX = "https://api.paydia.co.id/snap";
     protected const BASE_URL_PRODUCTION = "https://api.paydia.id/snap";
     protected static $baseUrl = self::BASE_URL_PRODUCTION;
 
