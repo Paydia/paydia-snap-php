@@ -86,5 +86,41 @@ class CustomerTopup
 
         return Service::serviceCall($url, $headers, $payload, 'POST');
     }
+	
+	/**
+     * Customer Topup Status
+     * 
+     * @param string $token
+     * @param array $payload
+     * @param string $timestamp in ISO-8601
+     * 
+     * @return array $response
+     */
+    public static function topupStatus($token, $payload, $externalId = "", $timestamp = "")
+    {
+        if (empty($timestamp) || $timestamp == "") {
+            $timestamp = Util::getDateNow();
+        }
+
+        if (empty($externalId) || $externalId == "") {
+            $externalId = time();
+        }
+
+        $url = Config::getBaseUrl() . '/' . Config::getVersion() . '/emoney/topup-status';
+
+        $path = '/snap/' . Config::getVersion() . '/emoney/topup-status';
+        $sign = Util::generateSignatureService('POST', $path, $token, $payload, $timestamp);
+        $headers = [
+            'Authorization:' . 'Bearer ' . $token,
+            'X-Timestamp:' . $timestamp,
+            'X-Partner-Id:' . Config::getClientId(),
+            'X-Signature:' . $sign,
+            'X-External-Id:' . $externalId,
+            'Channel-Id:' . Config::getChannelId(),
+        ];
+
+        return Service::serviceCall($url, $headers, $payload, 'POST');
+    }
+	
 
 }
