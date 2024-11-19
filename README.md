@@ -96,3 +96,84 @@ For more information about Request and Response can see documentation at https:/
     // Request Status Inquiry
     $checkStatus = Mpm::checkStatusQr($accessToken, $request, $externalId, $timestamp);
 ```
+
+### 2.4 Balance Inquiry
+
+For more information about Request and Response can see documentation at https://snap-docs.paydia.id/snap-service/balance-inquiry/.
+
+```php
+<?php
+    use PaydiaSNAP\Balance;
+
+    // Access Token from Access Token B2B
+    $accessToken = '';
+    // Request Balance Inquiry, see documentation for detail request
+    $request = array(
+        ...
+    );
+    // External Id Request (Optional Parameter)
+    $externalId = '';
+    // Timestamp in ISO-8601 (Optional Parameter)
+    $timestamp = '';
+
+    // Request Balance Inquiry
+    $balanceInquiry = Balance::inquiry($accessToken, $request, $externalId, $timestamp);
+```
+
+### 2.5 Customer Topup
+
+For more information about Request and Response can see documentation at https://snap-docs.paydia.id/snap-service/customer-topup/.
+
+```php
+<?php
+    use PaydiaSNAP\CustomerTopup;
+
+    // Access Token from Access Token B2B
+    $accessToken = '';
+    // Request Customer Topup, see documentation for detail request
+    $request = array(
+        ...
+    );
+    // External Id Request (Optional Parameter)
+    $externalId = '';
+    // Timestamp in ISO-8601 (Optional Parameter)
+    $timestamp = '';
+
+    // Request Account Inquiry
+    $accountInquiry = CustomerTopup::accountInquiry($accessToken, $request, $externalId, $timestamp);
+
+    // Request Topup
+    $topup = CustomerTopup::topup($accessToken, $request, $externalId, $timestamp);
+
+    // Request Topup Inquiry Status
+    $topupStatus = CustomerTopup::topupStatus($accessToken, $request, $externalId, $timestamp);
+```
+
+### 2.6 Transfer to Bank
+
+For more information about Request and Response can see documentation at https://snap-docs.paydia.id/snap-service/transfer-to-bank/.
+
+```php
+<?php
+    use PaydiaSNAP\TransferToBank;
+
+    // Access Token from Access Token B2B
+    $accessToken = '';
+    // Request Transfer to Bank, see documentation for detail request
+    $request = array(
+        ...
+    );
+    // External Id Request (Optional Parameter)
+    $externalId = '';
+    // Timestamp in ISO-8601 (Optional Parameter)
+    $timestamp = '';
+
+    // Request Account Inquiry
+    $accountInquiry = TransferToBank::accountInquiry($accessToken, $request, $externalId, $timestamp);
+
+    // Request Transfer Bank
+    $transferBank = TransferToBank::transferBank($accessToken, $request, $externalId, $timestamp);
+
+    // Request Transfer Status
+    $topupStatus = TransferToBank::topupStatus($accessToken, $request, $externalId, $timestamp);
+```

@@ -21,6 +21,7 @@ class Util
      */
     public static function getDateNow()
     {
+		date_default_timezone_set(Config::DATE_TIMEZONE);
         return date(Config::DATE_FORMAT);
     }
 
