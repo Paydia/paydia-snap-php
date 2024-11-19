@@ -2,7 +2,7 @@
     "name": "paydia/paydia-snap-php",
     "description": "PHP Wrapper for Paydia SNAP QR API.",
     "homepage": "https://paydia.id",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "type": "library",
     "license":"MIT",
     "authors": [
