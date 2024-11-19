@@ -172,7 +172,7 @@ For more information about Request and Response can see documentation at https:/
     $accountInquiry = TransferToBank::accountInquiry($accessToken, $request, $externalId, $timestamp);
 
     // Request Transfer Bank
-    $topup = TransferToBank::transferBank($accessToken, $request, $externalId, $timestamp);
+    $transferBank = TransferToBank::transferBank($accessToken, $request, $externalId, $timestamp);
 
     // Request Transfer Status
     $topupStatus = TransferToBank::topupStatus($accessToken, $request, $externalId, $timestamp);
