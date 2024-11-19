@@ -21,6 +21,13 @@ class Config
      * @var string
      */
     public const DATE_FORMAT = "Y-m-d\TH:i:sP";
+	
+	/**
+     * String date timezone
+     * 
+     * @var string
+     */
+	public const DATE_TIMEZONE = 'Asia/Jakarta';
 
     /**
      * Enviroment switch (default set to true)
@@ -34,7 +41,7 @@ class Config
      * 
      * @var string
      */
-    protected const BASE_URL_SANDBOX = "https://api.paydia.co.id/snap";
+    protected const BASE_URL_SANDBOX = "https://sb-api.paydia.co.id/snap";
     protected const BASE_URL_PRODUCTION = "https://api.paydia.id/snap";
     protected static $baseUrl = self::BASE_URL_PRODUCTION;
 

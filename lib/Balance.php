@@ -18,7 +18,7 @@ class Balance
 {
 
     /**
-     * Generate QR
+     * Balance Inquiry
      * 
      * @param string $token
      * @param array $payload
