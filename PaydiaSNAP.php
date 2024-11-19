@@ -20,6 +20,9 @@ require_once 'lib/Config.php';
 require_once 'lib/Service.php';
 require_once 'lib/Auth.php';
 require_once 'lib/Mpm.php';
+require_once 'lib/Balance.php';
+require_once 'lib/CustomerTopup.php';
+require_once 'lib/TransferToBank.php';
 
 // Utils
 require_once 'lib/Util.php';
